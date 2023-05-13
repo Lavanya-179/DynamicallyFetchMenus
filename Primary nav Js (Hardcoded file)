@@ -1,0 +1,98 @@
+function PrimaryNavController() {
+    const menus = [{
+        id: 'CommercialInsight',
+        text: 'Commercial Insight',
+        pageType: 1,
+        children: [{
+            text: 'Retail Analysis',
+            description: 'Trusted data, global insight and opinion, straight from the heart of retail',
+            column: 0,
+            row: 0
+        }, {
+            text: 'ShopperVista',
+            description: 'The “go to” insight that creates the foundation for forward facing shopper and category thinking',
+            column: 0,
+            row: 1
+        }, {
+            text: 'Supply Chain Analysis',
+            description: 'For supply chain people, by supply chain people – we provide the answers that unlock potential',
+            column: 0,
+            row: 2
+        }, {
+            text: 'Solutions',
+            description: 'Creating personalised solutions that address critical customer and commercial challenges',
+            column: 1,
+            row: 0
+        }, {
+            text: 'MarketTrack',
+            description: 'The most trusted, rigorous market read in the retail sector',
+            column: 1,
+            row: 1
+        }],
+        description: 'OUR PRODUCTS',
+        subTitle: 'We connect our industry.'
+    }, {
+        id: 'SocialImpact',
+        text: 'Social Impact',
+        pageType: 0,
+        children: [{
+            text: 'People',
+            description: 'Our role is to build employability and workplace skills, to create better opportunities and drive productivity. Our programmes are inclusive and support both those who are about to start work or those already in work',
+            column: 0,
+            row: 0
+        }, {
+            text: 'Economics',
+            description: 'We deliver free analysis of the latest economic and socio-economic trends, the policy landscape, and its impact on shoppers, to help organisations make sense of the external influences on our industry',
+            column: 0,
+            row: 1
+        }, {
+            text: 'Health',
+            description: 'Our ambition is to make healthy and sustainable diets easy for everyone, by leading industry collaborations and building greater knowledge of what really works',
+            column: 1,
+            row: 0
+        }, {
+            text: 'Sustainability',
+            description: 'Our ambition is to accelerate progress towards a sustainable food system. We focus on mobilising the industry to tackle climate change, reduce food waste, increase food surplus redistribution and develop sustainable packaging systems',
+            column: 1,
+            row: 1
+        }],
+        description: 'OUR FOCUS AREAS',
+        subTitle: 'Uniting and inspiring our industry.'
+    }, {
+        id: 'Learning',
+        text: 'Learning',
+        pageType: 2,
+        children: [],
+        description: '',
+        subTitle: '',
+        href: '/learning'
+    }, {
+        id: 'Events',
+        text: 'Events',
+        pageType: 2,
+        children: [],
+        description: '',
+        subTitle: '',
+        href: './events'
+    }, {
+        id: 'About',
+        text: 'About IGD',
+        pageType: 2,
+        children: [],
+        description: 'ABOUT US',
+        subTitle: 'Welcome to IGD.',
+        href: '/about-us'
+    }, {
+        id: 'Help',
+        text: 'Contact Us',
+        pageType: 2,
+        children: [],
+        description: '',
+        subTitle: '',
+        href: '/contact-us',
+        mobileOnly: true
+    }];
+
+    const primaryNav = $('igd-primary-nav');
+    primaryNav.attr('menus', JSON.stringify(menus));
+}
